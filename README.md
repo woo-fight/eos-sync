@@ -35,7 +35,7 @@ docker-compose -f docker-compose-mainnet.yml up -d
 进入mongo查看同步的数据:
 
 ```
-docker-compose -f docker-compose-eosblock-mainnet-init.yml exec mongo /bin/bash
+docker-compose -f docker-compose-mainnet.yml exec mongo /bin/bash
 mongo admin -u root -p 111222
 ```
 
