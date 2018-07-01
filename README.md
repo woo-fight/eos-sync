@@ -2,6 +2,13 @@
 
 快速搭建将EOS主网数据同步至mongodb数据库, 操作步骤:
 
+## 克隆项目
+
+```
+git clone git@github.com:EOSpace/eos-sync.git
+cd eos-sync
+```
+
 ## 10秒脚本搭建方法
 
 ```
@@ -13,8 +20,6 @@
 第一步，创建所需目录:
 
 ```
-git clone git@github.com:EOSpace/eos-sync.git
-cd eos-sync
 mkdir -p /data/eos/nodeos-data-volume/nodeos-data-mainnet/mongo
 mkdir -p /data/eos/nodeos-data-volume/nodeos-data-mainnet/data
 ```
