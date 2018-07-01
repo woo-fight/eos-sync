@@ -11,7 +11,7 @@ git clone git@github.com:EOSpace/eos-sync.git
 cd eos-sync
 ```
 
-## 10秒脚本搭建方法
+## 5秒脚本搭建方法
 
 ```
 ./run.sh

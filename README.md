@@ -11,7 +11,7 @@ git clone git@github.com:EOSpace/eos-sync.git
 cd eos-sync
 ```
 
-## Setup in 10 seconds using the shell
+## Setup in 5 seconds using the shell
 
 ```
 ./run.sh
