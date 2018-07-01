@@ -2,6 +2,14 @@
 
 1分钟快速搭建将EOS主网数据同步至mongodb数据库, 操作步骤:
 
+## 10秒脚本搭建方法
+
+```
+./run.sh
+```
+
+## 手工搭建方法
+
 第一步，创建所需目录:
 
 ```
@@ -22,7 +30,9 @@ cp -r genesis.json /data/eos/nodeos-data-volume/nodeos-data-mainnet
 docker-compose -f docker-compose-mainnet.yml up -d
 ```
 
-第四步，进入mongo查看同步的数据:
+## 查看同步的数据
+
+进入mongo查看同步的数据:
 
 ```
 docker-compose -f docker-compose-eosblock-mainnet-init.yml exec mongo /bin/bash
