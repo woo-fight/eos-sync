@@ -1,9 +1,11 @@
 #!/bin/bash
 
-mkdir -p /data/eos/nodeos-data-volume/nodeos-data-mainnet/mongo
-mkdir -p /data/eos/nodeos-data-volume/nodeos-data-mainnet/data
+DATA_DIR=/data/eos/nodeos-data-volume/nodeos-data-mainnet
 
-cp -r config.ini /data/eos/nodeos-data-volume/nodeos-data-mainnet
-cp -r genesis.json /data/eos/nodeos-data-volume/nodeos-data-mainnet
+mkdir -p $DATA_DIR/mongo
+mkdir -p $DATA_DIR/data
+
+cp -r config.ini $DATA_DIR
+cp -r genesis.json $DATA_DIR
 
 docker-compose -f docker-compose-mainnet.yml up -d
