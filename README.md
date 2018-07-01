@@ -13,6 +13,8 @@
 第一步，创建所需目录:
 
 ```
+git clone git@github.com:EOSpace/eos-sync.git
+cd eos-sync
 mkdir -p /data/eos/nodeos-data-volume/nodeos-data-mainnet/mongo
 mkdir -p /data/eos/nodeos-data-volume/nodeos-data-mainnet/data
 ```

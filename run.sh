@@ -1,5 +1,8 @@
 #!/bin/bash
 
+git clone git@github.com:EOSpace/eos-sync.git
+cd eos-sync
+
 mkdir -p /data/eos/nodeos-data-volume/nodeos-data-mainnet/mongo
 mkdir -p /data/eos/nodeos-data-volume/nodeos-data-mainnet/data
 
