@@ -4,6 +4,11 @@
 
 [View in English](README.md)
 
+## 安装docker
+
+- [Docker](https://docs.docker.com) Docker版本 >= 17.05
+- [docker-compose](https://docs.docker.com/compose/) 版本 >= 1.10.0
+
 ## 克隆项目
 
 ```

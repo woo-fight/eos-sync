@@ -4,6 +4,11 @@ Quickly set up the EOS main network data synchronization to the mongodb database
 
 [点击查看中文](README_CN.md)
 
+## Install Dependencies
+
+- [Docker](https://docs.docker.com) Docker 17.05 or higher is required
+- [docker-compose](https://docs.docker.com/compose/) version >= 1.10.0
+
 ## Clone project
 
 ```
