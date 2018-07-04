@@ -67,3 +67,17 @@ transaction_traces
 transactions
 ```
 
+## Stop/Restart syncing
+
+To stop the syncing process:
+
+```
+docker-compose -f docker-compose-mainnet-op.yml down
+```
+
+To restart the syncing process:
+
+```
+docker-compose -f docker-compose-mainnet-op.yml up -d
+```
+

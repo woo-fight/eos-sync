@@ -67,3 +67,17 @@ transaction_traces
 transactions
 ```
 
+## 停止/重启 同步
+
+停止数据同步:
+
+```
+docker-compose -f docker-compose-mainnet-op.yml down
+```
+
+重启数据同步:
+
+```
+docker-compose -f docker-compose-mainnet-op.yml up -d
+```
+
