@@ -1,59 +1,59 @@
 # EOS-Sync
 
-Quickly set up the EOS main network data synchronization to the mongodb database, operating steps:
+快速搭建将EOS主网数据同步至mongodb数据库, 操作步骤:
 
-[点击查看中文](README_CN.md)
+[View in English](README.md)
 
-## Install Dependencies
+## 安装docker
 
-- [Docker](https://docs.docker.com) Docker 17.05 or higher is required
-- [docker-compose](https://docs.docker.com/compose/) version >= 1.10.0
+- [Docker](https://docs.docker.com) Docker版本 >= 17.05
+- [docker-compose](https://docs.docker.com/compose/) 版本 >= 1.10.0
 
-## Clone project
+## 克隆项目
 
 ```
 git clone git@github.com:EOSpace/eos-sync.git
 cd eos-sync
 ```
 
-## Setup in 5 seconds using the shell
+## 5秒脚本搭建方法
 
 ```
 ./run.sh
 ```
 
-## Setup manually in 1 minute
+## 1分钟手工搭建方法
 
-The first step, create the desired directory:
+第一步，创建所需目录:
 
 ```
 mkdir -p /data/eos/nodeos-data-volume/nodeos-data-mainnet/mongo
 mkdir -p /data/eos/nodeos-data-volume/nodeos-data-mainnet/data
 ```
 
-The second step is to prepare the configuration file:
+第二步，准备配置文件:
 
 ```
 cp -r config.ini /data/eos/nodeos-data-volume/nodeos-data-mainnet
 cp -r genesis.json /data/eos/nodeos-data-volume/nodeos-data-mainnet
 ```
 
-The third step, start synchronizing data:
+第三步，开始同步数据:
 
 ```
 docker-compose -f docker-compose-mainnet.yml up -d
 ```
 
-## View synchronized data
+## 查看同步的数据
 
-Enter mongo to view synchronized data:
+进入mongo查看同步的数据:
 
 ```
 docker-compose -f docker-compose-mainnet.yml exec mongo /bin/bash
 mongo admin -u root -p 111222
 ```
 
-The synchronization result is as follows:
+同步结果如下:
 
 ```
 > use EOS;
