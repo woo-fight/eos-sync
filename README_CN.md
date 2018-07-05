@@ -78,6 +78,7 @@ docker-compose -f docker-compose-mainnet-op.yml down
 重启数据同步:
 
 ```
+docker-compose -f docker-compose-mainnet-op.yml down
 docker-compose -f docker-compose-mainnet-op.yml up -d
 ```
 

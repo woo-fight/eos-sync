@@ -78,6 +78,7 @@ docker-compose -f docker-compose-mainnet-op.yml down
 To restart the syncing process:
 
 ```
+docker-compose -f docker-compose-mainnet-op.yml down
 docker-compose -f docker-compose-mainnet-op.yml up -d
 ```
 
