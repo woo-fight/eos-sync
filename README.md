@@ -67,7 +67,7 @@ transaction_traces
 transactions
 ```
 
-## Stop/Restart syncing
+## Stop/Restart/Replay syncing
 
 To stop the syncing process:
 
@@ -82,3 +82,9 @@ docker-compose -f docker-compose-mainnet-op.yml down
 docker-compose -f docker-compose-mainnet-op.yml up -d
 ```
 
+To replay the blockchain:
+
+```
+docker-compose -f docker-compose-mainnet-replay.yml down
+docker-compose -f docker-compose-mainnet-replay.yml up -d
+```
