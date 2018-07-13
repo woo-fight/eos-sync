@@ -1,0 +1,31 @@
+version: "3"
+
+services:
+  mongo:
+    image: bitnami/mongodb:3.6.4
+    hostname: mongo
+    ports:
+      - 27018:27017
+    volumes:
+      - /data/eos/nodeos-data-volume/nodeos-data-mainnet/mongo:/bitnami/mongodb
+    environment:
+      MONGODB_USERNAME: eosmongo
+      MONGODB_PASSWORD: 111222
+      MONGODB_ROOT_PASSWORD: 111222
+      MONGODB_DATABASE: EOS
+  nodeosd:
+    image: noprom/eos:mongo
+    command: /start_nodeosd.sh
+    hostname: nodeosd
+    links: 
+      - mongo
+    ports:
+      - 8892:8888
+      - 9881:9876
+    expose:
+      - "8888"
+    volumes:
+      - /data/eos/nodeos-data-volume/nodeos-data-mainnet:/etc/nodeos
+      - /data/eos/nodeos-data-volume/nodeos-data-mainnet/data:/data
+      - ./start_nodeosd_replay.sh:/start_nodeosd.sh:ro
+
