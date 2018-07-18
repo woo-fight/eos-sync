@@ -82,3 +82,9 @@ docker-compose -f docker-compose-mainnet-op.yml down
 docker-compose -f docker-compose-mainnet-op.yml up -d
 ```
 
+Replay区块:
+
+```
+docker-compose -f docker-compose-mainnet-replay.yml down
+docker-compose -f docker-compose-mainnet-replay.yml up -d
+```
