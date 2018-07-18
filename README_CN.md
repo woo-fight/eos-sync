@@ -41,7 +41,7 @@ cp -r genesis.json /data/eos/nodeos-data-volume/nodeos-data-mainnet
 第三步，开始同步数据:
 
 ```
-docker-compose -f docker-compose-mainnet-init.yml up -d
+docker-compose -f docker-compose-mainnet-init.yaml up -d
 ```
 
 ## 查看同步的数据
@@ -49,7 +49,7 @@ docker-compose -f docker-compose-mainnet-init.yml up -d
 进入mongo查看同步的数据:
 
 ```
-docker-compose -f docker-compose-mainnet-init.yml exec mongo /bin/bash
+docker-compose -f docker-compose-mainnet-init.yaml exec mongo /bin/bash
 mongo admin -u root -p 111222
 ```
 
@@ -72,19 +72,19 @@ transactions
 停止数据同步:
 
 ```
-docker-compose -f docker-compose-mainnet.yml down
+docker-compose -f docker-compose-mainnet.yaml down
 ```
 
 重启数据同步:
 
 ```
-docker-compose -f docker-compose-mainnet.yml down
-docker-compose -f docker-compose-mainnet.yml up -d
+docker-compose -f docker-compose-mainnet.yaml down
+docker-compose -f docker-compose-mainnet.yaml up -d
 ```
 
 Replay区块:
 
 ```
-docker-compose -f docker-compose-mainnet-replay.yml down
-docker-compose -f docker-compose-mainnet-replay.yml up -d
+docker-compose -f docker-compose-mainnet-replay.yaml down
+docker-compose -f docker-compose-mainnet-replay.yaml up -d
 ```

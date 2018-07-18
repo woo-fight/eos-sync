@@ -41,7 +41,7 @@ cp -r genesis.json /data/eos/nodeos-data-volume/nodeos-data-mainnet
 The third step, start synchronizing data:
 
 ```
-docker-compose -f docker-compose-mainnet-init.yml up -d
+docker-compose -f docker-compose-mainnet-init.yaml up -d
 ```
 
 ## View synchronized data
@@ -49,7 +49,7 @@ docker-compose -f docker-compose-mainnet-init.yml up -d
 Enter mongo to view synchronized data:
 
 ```
-docker-compose -f docker-compose-mainnet-init.yml exec mongo /bin/bash
+docker-compose -f docker-compose-mainnet-init.yaml exec mongo /bin/bash
 mongo admin -u root -p 111222
 ```
 
@@ -72,19 +72,19 @@ transactions
 To stop the syncing process:
 
 ```
-docker-compose -f docker-compose-mainnet.yml down
+docker-compose -f docker-compose-mainnet.yaml down
 ```
 
 To restart the syncing process:
 
 ```
-docker-compose -f docker-compose-mainnet.yml down
-docker-compose -f docker-compose-mainnet.yml up -d
+docker-compose -f docker-compose-mainnet.yaml down
+docker-compose -f docker-compose-mainnet.yaml up -d
 ```
 
 To replay the blockchain:
 
 ```
-docker-compose -f docker-compose-mainnet-replay.yml down
-docker-compose -f docker-compose-mainnet-replay.yml up -d
+docker-compose -f docker-compose-mainnet-replay.yaml down
+docker-compose -f docker-compose-mainnet-replay.yaml up -d
 ```
