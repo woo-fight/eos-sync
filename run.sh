@@ -8,4 +8,4 @@ mkdir -p $DATA_DIR/data
 cp -r config.ini $DATA_DIR
 cp -r genesis.json $DATA_DIR
 
-docker-compose -f docker-compose-mainnet.yml up -d
+docker-compose -f docker-compose-mainnet-init.yml up -d

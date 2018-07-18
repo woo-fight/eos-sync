@@ -27,5 +27,5 @@ services:
     volumes:
       - /data/eos/nodeos-data-volume/nodeos-data-mainnet:/etc/nodeos
       - /data/eos/nodeos-data-volume/nodeos-data-mainnet/data:/data
-      - ./start_nodeosd_init.sh:/start_nodeosd.sh:ro
+      - ./start_nodeosd.sh:/start_nodeosd.sh:ro
 
