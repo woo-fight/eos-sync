@@ -7,7 +7,7 @@ services:
     ports:
       - 27018:27017
     volumes:
-      - /data/eos/nodeos-data-volume/nodeos-data-mainnet/mongo:/bitnami/mongodb
+      - /home/eos-sources/data/eos/nodeos-data-volume/nodeos-data-mainnet/mongo:/bitnami/mongodb
     environment:
       MONGODB_USERNAME: eosmongo
       MONGODB_PASSWORD: 111222
@@ -15,7 +15,10 @@ services:
       MONGODB_DATABASE: EOS
   nodeosd:
     image: noprom/eosmainnet:v1.1.0
-    command: /start_nodeosd.sh
+    stdin_open: true
+    tty: true
+    #command: sleep 1000
+    #command: /start_nodeosd.sh
     hostname: nodeosd
     links: 
       - mongo
@@ -25,7 +28,7 @@ services:
     expose:
       - "8888"
     volumes:
-      - /data/eos/nodeos-data-volume/nodeos-data-mainnet:/etc/nodeos
-      - /data/eos/nodeos-data-volume/nodeos-data-mainnet/data:/data
+      - /home/eos-sources/data/eos/nodeos-data-volume/nodeos-data-mainnet/config:/etc/nodeos
+      - /home/eos-sources/data/eos/nodeos-data-volume/nodeos-data-mainnet/data:/data
       - ./start_nodeosd.sh:/start_nodeosd.sh:ro
 
